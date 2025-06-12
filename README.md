@@ -37,32 +37,27 @@ If you're using Windows:
 
 ### ✅ 3. (Optional but recommended) Create a virtual environment
 
-```bash
 python -m venv venv
 venv\Scripts\activate
 
 ✅ 4. Install the required Python packages
-
 pip install -r requirements.txt
+
 ✅ 5. Install Graphviz
-Windows: Download and install from https://graphviz.org/download
+Windows:
+Download and install from: https://graphviz.org/download
 (During installation, make sure to check “Add Graphviz to system PATH”)
 
 Ubuntu:
-
-
 sudo apt install graphviz
+
 ✅ 6. Create your .env file
 Inside the same project folder, create a new file called .env and add the following line:
 
-
 OPENAI_API_KEY=your_openai_key_here
-⚠️ Important: This file should never be uploaded to GitHub or shared publicly.
 
 ✅ 7. Run the tool
-Now you’re ready to go!
-
-
+Once everything is set up, run:
 python main.py
 You’ll be asked to enter a smart system description.
 The tool will then generate:
@@ -70,7 +65,9 @@ The tool will then generate:
 generated_dfd.dot: the raw Graphviz output
 
 generated_dfd.png: the rendered image
-All files are saved inside the outputs/ folder.
+
+All files will be saved in the outputs/ folder.
+
 
 📝 Notes
 You need an internet connection to access the OpenAI API.
