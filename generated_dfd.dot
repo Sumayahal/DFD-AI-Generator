@@ -1,0 +1,101 @@
+digraph DFD {
+rankdir=LR;
+layout=dot;
+nodesep=1.2;
+ranksep=1.5;
+splines=ortho;
+fontsize=12;
+fontname="Arial";
+
+subgraph cluster_User_Zone {
+label="User Zone";
+style=dashed;
+color=red;
+"Citizens";
+"Event Ingestion API";
+"Citizen Reports DB";
+}
+subgraph cluster_API_Gateway_Zone {
+label="API Gateway Zone";
+style=dashed;
+color=red;
+"Emergency Dispatch Center";
+"Emergency Prioritization Engine";
+"Emergency Events Archive";
+}
+subgraph cluster_Processing_Core_Zone {
+label="Processing Core Zone";
+style=dashed;
+color=red;
+"Law Enforcement Database";
+"Dispatch Scheduler";
+"Incident Response Log";
+}
+subgraph cluster_Data_Lake_Zone {
+label="Data Lake Zone";
+style=dashed;
+color=red;
+"Fire Department Server";
+"Situation Dashboard";
+"Threat Intelligence Repository";
+}
+subgraph cluster_Monitoring_Zone {
+label="Monitoring Zone";
+style=dashed;
+color=red;
+"AI Risk Analyzer";
+"Dispatcher Log";
+}
+subgraph cluster_Security_Analysis_Zone {
+label="Security Analysis Zone";
+style=dashed;
+color=red;
+"";
+}
+subgraph cluster_Dispatch_Operations_Zone {
+label="Dispatch Operations Zone";
+style=dashed;
+color=red;
+"";
+}
+subgraph cluster_External_Agencies_Zone {
+label="External Agencies Zone";
+style=dashed;
+color=red;
+"";
+}
+subgraph cluster_Audit_and_Compliance_Zone {
+label="Audit and Compliance Zone";
+style=dashed;
+color=red;
+"";
+}
+
+"Citizens" [shape=square, style=filled, fillcolor="#FFF2CC", fontname="Arial"];
+"Emergency Dispatch Center" [shape=square, style=filled, fillcolor="#FFF2CC", fontname="Arial"];
+"Law Enforcement Database" [shape=square, style=filled, fillcolor="#FFF2CC", fontname="Arial"];
+"Fire Department Server" [shape=square, style=filled, fillcolor="#FFF2CC", fontname="Arial"];
+"Event Ingestion API" [shape=circle, style=filled, fillcolor="#DAE8FC", fontname="Arial"];
+"Emergency Prioritization Engine" [shape=circle, style=filled, fillcolor="#DAE8FC", fontname="Arial"];
+"Dispatch Scheduler" [shape=circle, style=filled, fillcolor="#DAE8FC", fontname="Arial"];
+"Situation Dashboard" [shape=circle, style=filled, fillcolor="#DAE8FC", fontname="Arial"];
+"AI Risk Analyzer" [shape=circle, style=filled, fillcolor="#DAE8FC", fontname="Arial"];
+"Citizen Reports DB" [shape=cylinder, style=filled, fillcolor="#E2EFDA", fontname="Arial"];
+"Emergency Events Archive" [shape=cylinder, style=filled, fillcolor="#E2EFDA", fontname="Arial"];
+"Incident Response Log" [shape=cylinder, style=filled, fillcolor="#E2EFDA", fontname="Arial"];
+"Threat Intelligence Repository" [shape=cylinder, style=filled, fillcolor="#E2EFDA", fontname="Arial"];
+"Dispatcher Log" [shape=cylinder, style=filled, fillcolor="#E2EFDA", fontname="Arial"];
+
+"Citizens" -> "Event Ingestion API" [label="Submit Emergency Report", fontname="Arial", fontsize=10];
+"Event Ingestion API" -> "Citizen Reports DB" [label="Store Incident Data", fontname="Arial", fontsize=10];
+"Citizen Reports DB" -> "Emergency Prioritization Engine" [label="Retrieve Historical Emergencies", fontname="Arial", fontsize=10];
+"Emergency Prioritization Engine" -> "Emergency Events Archive" [label="Archive Prioritized Event", fontname="Arial", fontsize=10];
+"Emergency Events Archive" -> "Dispatch Scheduler" [label="Fetch Event History", fontname="Arial", fontsize=10];
+"Dispatch Scheduler" -> "Incident Response Log" [label="Log Dispatch Actions", fontname="Arial", fontsize=10];
+"Incident Response Log" -> "Situation Dashboard" [label="Access Incident Logs", fontname="Arial", fontsize=10];
+"Situation Dashboard" -> "Threat Intelligence Repository" [label="Update Dashboard View", fontname="Arial", fontsize=10];
+"Threat Intelligence Repository" -> "AI Risk Analyzer" [label="Fetch Threat Data", fontname="Arial", fontsize=10];
+"AI Risk Analyzer" -> "Dispatcher Log" [label="Record Risk Assessment", fontname="Arial", fontsize=10];
+"Dispatcher Log" -> "Fire Department Server" [label="Access Response History", fontname="Arial", fontsize=10];
+"Fire Department Server" -> "Event Ingestion API" [label="Request Service Data", fontname="Arial", fontsize=10];
+}
