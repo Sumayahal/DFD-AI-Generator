@@ -79,8 +79,8 @@ You can modify the description or prompts to explore different systems.
 
 👩‍💻 Author
 
-Sumayah Najah Sabea Alaasam
-Master’s Thesis – Software Engineering
+Sumayah Najah Sabea Alaasam,
+Master’s Thesis – Software Engineering,
 Mälardalens University, Sweden
 
 
