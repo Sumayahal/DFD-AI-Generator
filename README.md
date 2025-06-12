@@ -70,6 +70,7 @@ All files will be saved in the outputs/ folder.
 
 
 📝 Notes
+
 You need an internet connection to access the OpenAI API.
 
 This tool was developed for academic and research purposes.
@@ -77,6 +78,7 @@ This tool was developed for academic and research purposes.
 You can modify the description or prompts to explore different systems.
 
 👩‍💻 Author
+
 Sumayah Najah Sabea Alaasam
 Master’s Thesis – Software Engineering
 Mälardalens University, Sweden
