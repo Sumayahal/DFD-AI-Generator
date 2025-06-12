@@ -42,9 +42,7 @@ python -m venv venv
 venv\Scripts\activate
 
 ✅ 4. Install the required Python packages
-bash
-Copy
-Edit
+
 pip install -r requirements.txt
 ✅ 5. Install Graphviz
 Windows: Download and install from https://graphviz.org/download
@@ -52,25 +50,19 @@ Windows: Download and install from https://graphviz.org/download
 
 Ubuntu:
 
-bash
-Copy
-Edit
+
 sudo apt install graphviz
 ✅ 6. Create your .env file
 Inside the same project folder, create a new file called .env and add the following line:
 
-ini
-Copy
-Edit
+
 OPENAI_API_KEY=your_openai_key_here
 ⚠️ Important: This file should never be uploaded to GitHub or shared publicly.
 
 ✅ 7. Run the tool
 Now you’re ready to go!
 
-bash
-Copy
-Edit
+
 python main.py
 You’ll be asked to enter a smart system description.
 The tool will then generate:
